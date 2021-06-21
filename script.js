@@ -1,4 +1,3 @@
-// Check out this simple little application! Feel free to inspect the code.
 
 $(document).ready(function () {
   $(".toggle-this").hide();

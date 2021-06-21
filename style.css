@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Barlow', sans-serif;
-    background: #457fca; 
+    background: #457fca;
     background: linear-gradient(to right, #5691c8, #457fca);
     height: 100vh;
     color: #595959;
@@ -67,6 +67,7 @@ a:hover {
     color: lightsalmon;
     text-decoration: none;
 }
+
 section {
     margin: 10px;
 }
@@ -84,13 +85,13 @@ select {
 }
 
 .checkbox {
-	margin-left: -1rem;
-	width: 5rem;
+    margin-left: -1rem;
+    width: 5rem;
 }
 
 .impuesto-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
