@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor de Divisas</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+<div id='app' class='ar-container'>
+    <section>
+        <div></div><h1 id='output-converted'><i class="fas fa-balance-scale"></i> Conversor<strong> de Divisas</strong></h1>
+    </section>
+
+    <section class='toggle-this'>
+        <legend class="ar-legend">Monto:</legend>
+        <input id='pesosIngresados' type="number" placeholder="Ingrese un monto en Pesos" required>
+    </section>
+
+    <section class="toggle-this">
+        <label for="monedaSeleccionada"
+            >Elija la moneda:</label>
+        <select class="form-control" id="monedaSeleccionada" required>
+            <option></option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select>
+    </section>
+
+    <section class="toggle-this impuesto-container">
+        <input type="checkbox" class="checkbox" id="checkImpuesto" />
+        <label class="form-check-label" for="checkImpuesto">Impuesto PAIS</label>
+    </section>
+        
+    <section class="toggle-this">
+        <legend class="ar-legend">Resultado:</legend>
+        <input type="number" class="form-control" id="value2" disabled="disabled"/>
+    </section>
+
+    <section class='toggle-this'>
+        <button id='botonConversor' class='ar-button'>CONVERTIR</button>
+    </section>
+  
+  <section>
+        <p>Hecho por <a href='https://github.com/juantibaldo' target='blank'>Juan Tibaldo</a></p>
+        </section>
+    </div>
+
+    <datalist id="array-countries"></datalist>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
