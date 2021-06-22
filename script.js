@@ -10,7 +10,6 @@ $(document).ready(function () {
   let impuestoPais = $("#checkImpuesto");
   let monedaSeleccionada = $("#monedaSeleccionada");
 
-
   function sumarImpuesto(divisa) {
     return impuestoPais.prop("checked") ? divisa * 0.7 : divisa;
   }
