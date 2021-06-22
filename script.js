@@ -9,19 +9,7 @@ $(document).ready(function () {
   let boton = $("#botonConversor");
   let impuestoPais = $("#checkImpuesto");
   let monedaSeleccionada = $("#monedaSeleccionada");
-  let cotizacionDolar = 0.011;
-  let cotizacionEuro = 0.088;
 
-  class Divisa {
-    constructor(nombre, cotizacion) {
-      this.nombre = nombre;
-      this.cotizacion = parseFloat(cotizacion);
-      this.impuestoPais = impuestoPais;
-    }
-  }
-
-  const divisaDolar = new Divisa("USD", cotizacionDolar);
-  const divisaEuro = new Divisa("EUR", cotizacionEuro);
 
   function sumarImpuesto(divisa) {
     return impuestoPais.prop("checked") ? divisa * 0.7 : divisa;
@@ -48,7 +36,7 @@ $(document).ready(function () {
           respuesta[currency]
         );
 
-        $("#value2").val(valorConvertido);
+        $("#value2").val(valorConvertido.toFixed(2));
 
         console.log(
           "$" +
@@ -86,6 +74,14 @@ $(document).ready(function () {
       case "CHF":
         getCotizacionFromApi("chf");
         break;
+
+      case "JPY":
+        getCotizacionFromApi("jpy");
+        break;
+
+      case "GBP":
+        getCotizacionFromApi("gbp");
+        break;    
 
       default:
         console.log("No seleccionó divisa");
