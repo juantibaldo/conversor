@@ -1,3 +1,5 @@
+/* currency list: https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies.json */
+
 
 $(document).ready(function () {
   $(".toggle-this").hide();
@@ -79,6 +81,10 @@ $(document).ready(function () {
 
       case "EUR":
         getCotizacionFromApi("eur");
+        break;
+
+      case "CHF":
+        getCotizacionFromApi("chf");
         break;
 
       default:
