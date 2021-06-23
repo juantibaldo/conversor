@@ -19,12 +19,6 @@ $(document).ready(function () {
     return monto * newDivisa;
   }
 
-  function quiereImpuestoPais(impuestoPais) {
-    return impuestoPais.prop("checked")
-      ? " y quiere sumarle el impuesto PAIS."
-      : " y no quiere sumarle el impuesto PAIS.";
-  }
-
   function getCotizacionFromApi(currency) {
     const url = `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/ars/${currency}.json`;
 
@@ -86,6 +80,12 @@ $(document).ready(function () {
         console.log("No seleccionó divisa");
         alert("Debe seleccionar una divisa!");
     }
+
+      function quiereImpuestoPais(impuestoPais) {
+    return impuestoPais.prop("checked")
+      ? " y quiere sumarle el impuesto PAIS."
+      : " y no quiere sumarle el impuesto PAIS.";
+  }
 
     console.log(
       "El usuario ingresó pesos(ARS): $" +
