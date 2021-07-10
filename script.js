@@ -30,7 +30,7 @@ $(document).ready(function () {
           respuesta[currency]
         );
 
-        $("#value2").val(valorConvertido.toFixed(2));
+        $("#value2").val(valorConvertido.toFixed(3));
 
         console.log(
           "$" +
@@ -75,7 +75,23 @@ $(document).ready(function () {
 
       case "GBP":
         getCotizacionFromApi("gbp");
-        break;    
+        break;  
+        
+      case "BTC":
+        getCotizacionFromApi("btc");
+        break;
+          
+      case "ETH":
+        getCotizacionFromApi("eth");
+        break;
+
+      case "BCH":
+        getCotizacionFromApi("bch");
+        break;
+
+      case "LTC":
+        getCotizacionFromApi("ltc");
+        break;
 
       default:
         console.log("No seleccionó divisa");
