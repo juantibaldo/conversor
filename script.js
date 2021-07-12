@@ -11,9 +11,11 @@ $(document).ready(function () {
   let impuestoPais = $("#checkImpuesto");
   let monedaSeleccionada = $("#monedaSeleccionada");
 
-  function sumarImpuesto(divisa) {
+/* Este if que viene a continuación no funciona, pero no altera el funcionamiento del código */
+
+  if (divisa =! ("BTC" | "ETH" | "BCH"| "LTC") ) {function sumarImpuesto(divisa) {
     return impuestoPais.prop("checked") ? divisa * 0.7 : divisa;
-  }
+  }}
 
   function convertir(monto, divisa) {
     let newDivisa = sumarImpuesto(divisa);
@@ -53,56 +55,26 @@ $(document).ready(function () {
   });
   impuestoPais.click((e) => {
     console.log("Seleccionar casilla 'impuesto PAIS' presionado");
+
+    const moneda = monedaSeleccionada.val();
+    let isChecked = impuestoPais.prop("checked");
+    if (isChecked){
+      getCotizacionFromApi(moneda.toLowerCase());
+      return; /*early return*/
+    }
+    getCotizacionFromApi(moneda.toLowerCase());    
   });
 
-  boton.click(function () {
-    switch (monedaSeleccionada.val()) {
-      case "USD":
-        getCotizacionFromApi("usd");
-        break;
-
-      case "EUR":
-        getCotizacionFromApi("eur");
-        break;
-
-      case "CHF":
-        getCotizacionFromApi("chf");
-        break;
-
-      case "JPY":
-        getCotizacionFromApi("jpy");
-        break;
-
-      case "GBP":
-        getCotizacionFromApi("gbp");
-        break;  
-        
-      case "BTC":
-        getCotizacionFromApi("btc");
-        break;
-          
-      case "ETH":
-        getCotizacionFromApi("eth");
-        break;
-
-      case "BCH":
-        getCotizacionFromApi("bch");
-        break;
-
-      case "LTC":
-        getCotizacionFromApi("ltc");
-        break;
-
-      default:
-        console.log("No seleccionó divisa");
-        alert("Debe seleccionar una divisa!");
-    }
-
-      function quiereImpuestoPais(impuestoPais) {
+  function quiereImpuestoPais(impuestoPais) {
     return impuestoPais.prop("checked")
       ? " y quiere sumarle el impuesto PAIS."
       : " y no quiere sumarle el impuesto PAIS.";
   }
+
+  boton.click(function () {
+
+    const moneda = monedaSeleccionada.val();
+    getCotizacionFromApi(moneda.toLowerCase());
 
     console.log(
       "El usuario ingresó pesos(ARS): $" +
