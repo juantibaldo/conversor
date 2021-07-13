@@ -1,95 +1,94 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow:300');
-
+@import url("https://fonts.googleapis.com/css?family=Barlow:300");
 
 body {
-    font-family: 'Barlow', sans-serif;
-    background: #457fca;
-    background: linear-gradient(to right, #5691c8, #457fca);
-    height: 100vh;
-    color: #595959;
+  font-family: "Barlow", sans-serif;
+  background: #457fca;
+  background: linear-gradient(to right, #5691c8, #457fca);
+  height: 100vh;
+  color: #595959;
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 .ar-container {
-    margin: auto;
-    position: relative;
-    top: 20%;
-    padding: 10px;
-    background-color: white;
-    width: 300px;
-    border-radius: 4px;
-    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  margin: auto;
+  position: relative;
+  top: 20%;
+  padding: 10px;
+  background-color: white;
+  width: 300px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .ar-container h1 {
-    text-align: center;
-    font-size: 1.6em;
+  text-align: center;
+  font-size: 1.6em;
 }
 
 .ar-button {
-    width: 100%;
-    background-color: salmon;
-    padding: 15px;
-    border: none;
-    border-radius: 4px;
-    color: white;
+  width: 100%;
+  background-color: salmon;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  color: white;
 }
 
 .ar-button:hover {
-    animation-name: btn-hover;
-    animation-duration: 1s;
+  animation-name: btn-hover;
+  animation-duration: 1s;
 }
 
 @keyframes btn-hover {
-    10% {
-        background-color: lightsalmon;
-    }
+  10% {
+    background-color: lightsalmon;
+  }
 }
 
 p {
-    text-align: center;
-    color: #898989;
-    font-size: 10px;
+  text-align: center;
+  color: #898989;
+  font-size: 10px;
 }
 
 a {
-    color: salmon;
-    text-decoration: none;
+  color: salmon;
+  text-decoration: none;
 }
 
 a:hover {
-    color: lightsalmon;
-    text-decoration: none;
+  color: lightsalmon;
+  text-decoration: none;
 }
 
 section {
-    margin: 10px;
+  margin: 10px;
 }
 
 input,
 select {
-    width: 100%;
-    padding: 0;
-    height: 40px;
-    background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    text-align: center;
-    text-align-last: center;
+  width: 100%;
+  padding: 0;
+  height: 40px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  text-align: center;
+  text-align-last: center;
 }
 
 .checkbox {
-    margin-left: 0.1rem;
-    margin-right: 0.5rem;
-    width: 1.3rem;
+  margin-left: 0.1rem;
+  margin-right: 0.5rem;
+  width: 1.3rem;
 }
 
 .impuesto-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }

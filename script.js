@@ -11,11 +11,9 @@ $(document).ready(function () {
   let impuestoPais = $("#checkImpuesto");
   let monedaSeleccionada = $("#monedaSeleccionada");
 
-/* Este if que viene a continuación no funciona, pero no altera el funcionamiento del código */
-
-  if (divisa =! ("BTC" | "ETH" | "BCH"| "LTC") ) {function sumarImpuesto(divisa) {
+  function sumarImpuesto(divisa) {
     return impuestoPais.prop("checked") ? divisa * 0.7 : divisa;
-  }}
+  }
 
   function convertir(monto, divisa) {
     let newDivisa = sumarImpuesto(divisa);
@@ -58,11 +56,11 @@ $(document).ready(function () {
 
     const moneda = monedaSeleccionada.val();
     let isChecked = impuestoPais.prop("checked");
-    if (isChecked){
+    if (isChecked) {
       getCotizacionFromApi(moneda.toLowerCase());
-      return; /*early return*/
+      return;
     }
-    getCotizacionFromApi(moneda.toLowerCase());    
+    getCotizacionFromApi(moneda.toLowerCase());
   });
 
   function quiereImpuestoPais(impuestoPais) {
@@ -72,7 +70,6 @@ $(document).ready(function () {
   }
 
   boton.click(function () {
-
     const moneda = monedaSeleccionada.val();
     getCotizacionFromApi(moneda.toLowerCase());
 
